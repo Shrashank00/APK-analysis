@@ -1,0 +1,18 @@
+/* Add custom styles to override Bootstrap or add additional styling */
+
+/* Center the content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Add padding and background to the container */
+.container {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}

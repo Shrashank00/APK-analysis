@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APK Analysis Results</title>
+</head>
+<body>
+    <h1>APK Analysis Results</h1>
+
+    <!-- Display Androguard Results -->
+    <h2>Androguard Analysis:</h2>
+    <ul>
+        <li><strong>Package Name:</strong> {{ androguard_results['Package Name'] }}</li>
+        <li><strong>Version Name:</strong> {{ androguard_results['Version Name'] }}</li>
+        <li><strong>Version Code:</strong> {{ androguard_results['Version Code'] }}</li>
+        <li><strong>Permissions:</strong>
+            <ul>
+                {% for permission in androguard_results['Permissions'] %}
+                    <li>{{ permission }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li><strong>Classes:</strong>
+            <ul>
+                {% for clazz in androguard_results['Classes'] %}
+                    <li>{{ clazz }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% if 'Error' in androguard_results %}
+            <li><strong>Error:</strong> {{ androguard_results['Error'] }}</li>
+        {% endif %}
+    </ul>
+
+    <!-- Display QARK Results -->
+    <h2>QARK Analysis:</h2>
+    <p>{{ qark_results }}</p>
+
+    <!-- Add styling or further customization as needed -->
+</body>
+</html>
