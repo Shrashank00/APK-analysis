@@ -108,4 +108,4 @@ def analyze_apk_with_qark(apk_path):
         return "QARK not found. Make sure it is installed and in your PATH."
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
